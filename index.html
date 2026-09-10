@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Optimizer Panel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="login-container" id="loginContainer">
+        <div class="login-box">
+            <h1>Game Optimizer</h1>
+            <form id="loginForm">
+                <input type="text" id="username" placeholder="Login" required>
+                <input type="password" id="password" placeholder="Senha" required>
+                <button type="submit">Entrar</button>
+            </form>
+            <p id="loginError" class="error"></p>
+        </div>
+    </div>
+
+    <div class="dashboard" id="dashboard" style="display: none;">
+        <div class="header">
+            <h1>🎮 Game Optimizer Panel</h1>
+            <button class="logout-btn" onclick="logout()">Sair</button>
+        </div>
+
+        <div class="container">
+            <div class="option-box">
+                <h2>📱 Otimizar seu Celular</h2>
+                <p>Libera recursos e melhora performance</p>
+                <button class="btn btn-primary" onclick="optimizePhone()">
+                    <span id="optimizeStatus">Ativar Otimização</span>
+                </button>
+                <div id="optimizeLog" class="log"></div>
+            </div>
+
+            <div class="option-box">
+                <h2>⚡ Forçar 120 FPS</h2>
+                <p>Aumenta taxa de frames para melhor responsividade</p>
+                <div class="toggle-switch">
+                    <input type="checkbox" id="fps120Toggle" onchange="toggle120FPS()">
+                    <label for="fps120Toggle" class="toggle-label">
+                        <span id="fps120Status">Desativado</span>
+                    </label>
+                </div>
+                <div id="fpsLog" class="log"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
